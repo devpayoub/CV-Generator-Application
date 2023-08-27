@@ -1,11 +1,7 @@
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/taskbuddy)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/taskbuddy?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/taskbuddy?style=social)
-  [![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/BWmL66b9bOo?style=social)](https://youtu.be/BWmL66b9bOo)
-
+  ![GitHub repo size](https://img.shields.io/github/repo-size/devpayoub/CV-Generator-Application)
+  ![GitHub stars](https://img.shields.io/github/stars/devpayoub/CV-Generator-Application?style=social)
   <br />
   <br />
 
