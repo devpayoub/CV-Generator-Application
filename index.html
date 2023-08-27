@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator Application</title>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  
+    
+    <div class="intro"><h1>CV Generator Application</h1>
+    <p>Completely fill the fields as indicated</p></div>
+
+
+
+ <div class="container">
+     
+    <section class="top grid">
+        
+            <div class="imgDiv">
+               <img src="./Images/noPhoto.png" alt="" id="image">
+              <input type="file" id="file" >
+              <label for="file" id="imgBtn">Change Image</label>
+              
+            </div>
+    
+            <div class="name">
+                <h4 class="introTxt">Intro Details</h4>
+                <div>
+                    <label for="name">Full Name</label>
+                <input class="input" type="text" id="name" placeholder="Enter your Name">
+                </div>
+                <div>
+                    <label for="title">Professional Title</label>
+                <input class="input" type="text" id="title" placeholder="Enter your title">
+                </div>
+                
+            </div>
+        
+        <div class="contact">
+            <h4 class="introTxt">Contact Details</h4>
+            <div>
+                <i class='bx bx-phone icon' ></i>
+                <input class="input"  type="number" placeholder="Enter phone number">
+            </div>
+            <div>
+                <i class='bx bx-mail-send icon'></i>
+                <input class="input" type="email" placeholder="Enter email" required>
+            </div>
+            <div>
+                <i class='bx bx-globe icon'></i>
+                <input class="input" type="text" placeholder="Enter website link" required >
+            </div>
+        </div>
+       
+    </section>
+
+    <section class="experienceDiv">
+        <h4 class="introTxt">Previous Job</h4>
+
+        <div class="jobDetails">
+            <div class="gridCol">
+                <div class="companyName">
+                    <label for="companyName">Company Name</label>
+                    <input class="input" type="text" id="compName" placeholder="Enter company name">
+                </div>
+                <div class="jobName">
+                    <label for="jobName">Job Title</label>
+                    <input class="input" type="text" id="jobName" placeholder="Enter job title">
+                </div>
+            </div>
+            <div class="date">
+                <div>
+                    <label for="jobStartDate">Start</label>
+                <input class="input" type="date" id="jobStartDate" placeholder="Start Date">
+                </div>
+                <div>
+                    <label for="jobEndDate">End</label>
+                    <h6 id="jobMessage">End date can't be ealier.</h6>
+                <input class="input" type="date" id="jobEndDate" placeholder="End Date">
+                </div>
+            </div>
+            <div class="description">
+                <label for="desc">Job Description</label>
+                <textarea id="desc" class="input"  placeholder="Describe your experience"></textarea>
+            </div>
+        </div>
+        <div id="newExp"></div>
+
+    </section>
+
+    <section class="profile">
+        <h4 class="introTxt">Profile Details</h4>
+        <div class="profileDiv">
+            <label for="summary">Profile Summary</label>
+            <textarea  id="summary" class="input" placeholder="Your profile summary"></textarea>
+        </div>
+<!-- Education division -------------------------------- -->
+        <div class="educDetails">
+            <div class="gridCol">
+                <div class="certificateName">
+                    <label for="certificateName">Certificate</label>
+                    <input class="input" type="text" id="certficateName" placeholder="Enter certificate">
+                </div>
+                <div class="schoolName">
+                    <label for="collegeName">College Name</label>
+                    <input class="input" type="text" id="collegeName" placeholder="Enter college name">
+                </div>
+            </div>
+           
+            <div class="date">
+                <div>
+                    <label for="startDate">Start</label>
+                <input class="input" type="date" id="startDate" placeholder="Start Date">
+                </div>
+                <div>
+                    <label for="endDate">End</label>
+                    <h6 id="ColMessage">End date can't be ealier.</h6>
+                <input class="input" type="date" id="endDate" placeholder="End Date">
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="skillsGridCol">
+            <div class="flex">
+               <div class="skills">
+                   <label for="skill">Skill</label>
+                   <div>
+                    <input class="input" type="text" id="skill" placeholder="Enter Skill">
+                    </div>
+                </div>
+                <div class="hobbies">
+                    <label for="hobby">Hobby</label>
+                   <div>
+                    <input class="input" type="text" id="hobby" placeholder="Enter hobby">
+                    </div>
+               </div>
+                
+            </div>
+            
+            
+        </div>
+
+    </section>
+
+    <div class="mainBtn">
+        <button id="previewBtn">View Resume</button>
+    </div>
+
+     <div id="cvContainer" class="cvContainer"> 
+        <section class="cvTop" id="cvTop">
+             <!-- <div class="cvTopDiv">
+                <img src="./Images/girl-smile-food-eggs-wallpaper-preview.jpg" alt="Image">
+            </div> 
+
+             <div class="cvNameDiv">
+                <div class="cvName">
+                    <h2>Ayoub Trabelsi</h2>
+                </div>
+                <div class="cvProff">
+                    <p>Web Developer</p>
+                </div>
+            </div> 
+
+             <div class="cvContactDiv">
+                <div>
+                    <i class='bx bx-phone icon' ></i>
+                    <p>0524312309</p>
+                </div>
+                <div>
+                    <i class='bx bx-mail-send icon'></i>
+                    <p>trabelsi.ayoub1998@gmail.com</p>
+                </div>
+                <div>
+                    <i class='bx bx-globe icon'></i>
+                    <p>########</p>
+                </div>
+            </div>  -->
+        </section>
+
+        <section class="cvExperienceDiv">
+              <!-- <div class="companyDetails">
+                
+
+                <div>
+                    <h3 class="titles">PREVIOUS JOB</h3>
+                    <p class="companyName">Atlantis</p>
+                  </div>
+                  <div>
+                    <p class="jobTitle">Web developer</p>
+                  </div>
+              </div>
+              <div class="dates">
+                  <div class="startDate">mm//dd//yyyy</div>
+                  <div class="endDate">mm//dd//yyyy</div>
+              </div>
+              <div class="jobDesc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic praesentium unde, ullam eos blanditiis minus!
+              </div> -->
+              
+        </section>
+
+        <section class="cvProfileSection">
+            <!-- <div class="pSummary">
+                <h3 class="titles">PROFILE SUMMARY</h3>
+               <p>
+Trying to learn how machines learn
+               </p>
+            </div>
+            <div class="colCert">
+                <h3 class="titles">EDUCATION</h3>
+                <h4 class="cerficate">Degree</h4>
+                <p class="college"> University</p>
+            </div>
+            <div class="collegeDatesDiv">
+                <div class="collegeStartDate">mm/dd/yyyy</div>
+                <div class="collegeEndDate">mm/dd/yyyy</div>
+            </div>
+
+            <div class="skillHobbyDiv">
+                <div class="personSkills">
+                    <h3 class="titles">EXPERTISE</h3>
+                    Photoshop, Illustrator, HTML, CSS</div>
+                <div class="personHobby">
+                    <h3 class="titles">HOBBIES</h3>
+                    Travelling, Gaming, Football
+                </div>
+            </div> -->
+        </section>
+              
+    </div>
+    <button id="downloadBtn" >Download CV</button>
+    
+</div>
+<div class="footer">
+    <small>Designed and Developed <small style="color:brown">By Ayoub Trabelsi</small></small><small style="font-size:1vw"> 2023</small></small>
+</div>
+<div class="openner">
+    <div class="opennerContent">
+        <h1>This app will be available ready to use soon!</h1>
+        <p>Developed with love by <b>Ayoub Trabelsi</b> <b>2023</b></p>
+    </div>
+</div>
+
+<script src="./main.js"></script>
+
+</body>
+</html>

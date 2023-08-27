@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300;400;500&display=swap");
+
+@mixin breakpoint($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+:root {
+  --primaryColor: rgb(121, 157, 224);
+  --secondaryColor: whitesmoke;
+  --inputColor: #d6e6e7a4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS Code Latin", sans-serif;
+  transition: 1s ease-in-out;
+}
+
+section {
+  margin-bottom: 3rem;
+  color: rgb(10, 52, 107);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.message {
+  color: red;
+  // display: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  width: 100%;
+  background: var(--inputColor);
+}
+input,
+textarea:focus {
+  outline: none;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+body {
+  background: rgb(250, 250, 250);
+}
+
+.container {
+  margin: 1rem;
+  @include breakpoint(480px) {
+    margin: 3rem 1rem 1rem;
+  }
+  @include breakpoint(940px) {
+    margin-left: 25rem;
+    margin-right: 25rem;
+  }
+}
+
+.introTxt {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.intro {
+  width: 100%;
+  margin: auto;
+  padding: 2rem 0;
+  text-align: center;
+  background: var(--primaryColor);
+  color: var(--secondaryColor);
+  h1 {
+    @include breakpoint(1080px) {
+      font-size: 45px;
+    }
+  }
+  p {
+    padding: 10px 0 0;
+    margin: auto;
+    @include breakpoint(1080px) {
+      font-size: 25px;
+    }
+  }
+}
+
+.top {
+  .imgDiv {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 1rem auto 2rem;
+    border: 10px solid rgba(236, 236, 236, 0.808);
+    &:hover #imgBtn {
+      display: block;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #file {
+      display: none;
+    }
+    #imgBtn {
+      position: absolute;
+      width: 100%;
+      background: #000000a6;
+      text-align: center;
+      padding: 0.7rem 0.7rem 0.8rem;
+      bottom: -10px;
+      left: 0;
+      color: var(--secondaryColor);
+      cursor: pointer;
+      font-size: 15px;
+      display: none;
+      transition: display 0.5s ease;
+    }
+  }
+
+  .name {
+    div {
+      margin: 10px 0;
+    }
+    input {
+      display: block;
+      margin: 8px 0;
+      background: var(--inputColor);
+    }
+  }
+
+  .contact {
+    div {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+
+      .icon {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.experienceDiv {
+  div {
+    margin-bottom: 10px;
+  }
+  input {
+    margin-top: 5px;
+    background: var(--inputColor);
+  }
+  .date {
+    margin: 1rem 0;
+    gap: 1rem;
+    div {
+      margin: 10px 0;
+    }
+    @include breakpoint(428px) {
+      display: flex;
+    }
+  }
+
+  .description {
+    label {
+      margin-bottom: 10px;
+    }
+    textarea {
+      height: 200px;
+      width: 100%;
+    }
+  }
+}
+.btn {
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: var(--primaryColor);
+    color: var(--secondaryColor);
+    font-size: 15px;
+    width: 50%;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background: #000000a6;
+    }
+  }
+}
+.profile {
+  div {
+    margin-bottom: 10px;
+  }
+  input,
+  textarea {
+    margin-top: 10px;
+    background: var(--inputColor);
+  }
+
+  .date {
+    margin: 1rem 0;
+    gap: 1rem;
+    div {
+      margin: 10px 0;
+    }
+    @include breakpoint(428px) {
+      display: flex;
+    }
+  }
+
+  #summary {
+    height: 200px;
+  }
+  .flex {
+    @include breakpoint(480px) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  .skills,
+  .hobbies {
+    button {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-left: 1rem;
+      background: var(--primaryColor);
+      color: var(--secondaryColor);
+      font-size: 15px;
+      width: auto;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background: #000000a6;
+      }
+    }
+  }
+}
+
+.mainBtn {
+  width: 100%;
+  #previewBtn {
+    padding: 10px;
+    margin: auto;
+    color: var(--secondaryColor);
+    background: cornflowerblue;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background: rgb(47, 84, 153);
+    }
+  }
+}
+
+.footer {
+  margin: 2rem auto 0;
+  padding: 2rem;
+  text-align: center;
+  font-size: 20px;
+  color: var(--secondaryColor);
+  background: var(--primaryColor);
+}
+
+.openner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12, 14, 44, 0.698);
+  display: none;
+
+  .opennerContent {
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 80%;
+    color: #2a2a2ace;
+    background: var(--secondaryColor);
+    @include breakpoint(1080px) {
+      width: 60%;
+    }
+    h1 {
+      padding-bottom: 1rem;
+      line-height: 2rem;
+      color: red;
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      @include breakpoint(450px) {
+        font-size: 30px;
+        line-height: 2.4rem;
+      }
+    }
+    h5 {
+      font-size: 15px;
+      @include breakpoint(480px) {
+        font-size: 25px;
+      }
+      @include breakpoint(1080px) {
+        font-size: 25px;
+      }
+    }
+    p {
+      margin: 1rem auto 0;
+      padding-top: 0.5rem;
+      text-align: center;
+      font-style: italic;
+      @include breakpoint(1080px) {
+        width: 60%;
+        line-height: 2.4rem;
+      }
+    }
+  }
+}
+#jobMessage {
+  display: none;
+  color: red;
+}
+#ColMessage {
+  display: none;
+  color: red;
+}
+
+// MAIN CV SCSS --------------------------------->
+.cvContainer {
+  margin-top: 2rem;
+  background-color: rgba(204, 204, 204, 0.157);
+  display: none;
+  color: rgb(10, 52, 107);
+  .titles {
+    margin-bottom: 1rem;
+    position: relative;
+    width: max-content;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: rgb(143, 143, 143);
+      height: 2px;
+      width: 50%;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+
+  .cvTop {
+    @include breakpoint(960px) {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .cvTopDiv {
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      background-color: antiquewhite;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .cvNameDiv {
+      margin: 1rem 0;
+      @include breakpoint(960px) {
+        font-size: 24px;
+      }
+      .cvProff p {
+        font-size: 25px;
+        @include breakpoint(960px) {
+          font-size: 30px;
+        }
+      }
+    }
+    .cvContactDiv div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      p {
+        font-size: 18px;
+        @include breakpoint(960px) {
+          line-height: 2rem;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .cvExperienceDiv {
+    padding: 10px;
+    .companyDetails {
+      margin-bottom: 0.6rem;
+      div p {
+        font-size: 18px;
+      }
+      .companyName {
+        font-weight: 500;
+      }
+    }
+    .dates {
+      display: flex;
+      position: relative;
+      width: max-content;
+      gap: 1rem;
+      &::after {
+        content: "";
+        height: 3px;
+        width: 6px;
+        background: var(--primaryColor);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-2.5px);
+      }
+      div {
+        padding: 8px;
+        background-color: var(--primaryColor);
+        color: var(--secondaryColor);
+        font-size: 15px;
+      }
+    }
+    .jobDesc {
+      max-width: 100%;
+      margin-top: 0.5rem;
+      opacity: 0.9;
+    }
+  }
+
+  .cvProfileSection {
+    background-color: rgba(185, 184, 184, 0.157);
+    padding: 10px;
+    .pSummary p {
+      max-width: 100%;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    .colCert h4 + p {
+      margin-bottom: 10px;
+    }
+    .collegeDatesDiv {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      position: relative;
+      width: max-content;
+      &::after {
+        content: "";
+        height: 3px;
+        width: 6px;
+        background: var(--primaryColor);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-2.5px);
+      }
+      div {
+        padding: 8px;
+        background-color: var(--primaryColor);
+        color: var(--secondaryColor);
+        font-size: 15px;
+      }
+    }
+    .skillHobbyDiv,
+    .personSkills {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+#downloadBtn {
+  display: none;
+  background: rgb(139, 238, 139);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 15px;
+  cursor: pointer;
+  &:hover{
+    background: rgb(108, 190, 108);
+  }
+}
+
+// Media querries ===================================================
+
+.gridCol {
+  @include breakpoint(480px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+.skillsGridCol {
+  @include breakpoint(800px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  p {
+    width: 200px;
+    // margin: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  background: var(--BgColor);
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  border-radius: 4px;
+  cursor: pointer;
+}
